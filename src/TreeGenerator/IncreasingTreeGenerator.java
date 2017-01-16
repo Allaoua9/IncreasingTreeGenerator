@@ -61,11 +61,6 @@ public class IncreasingTreeGenerator {
                 while (orderPositive) {
                     coef = combination(size, i)
                             .multiply(this.coefficients.get(i-1).multiply(this.coefficients.get(size - i)));
-                    System.out.println("************");
-                    System.out.println("Comb = "+ combination(size, i));
-                    System.out.println("F("+(i-1)+") = " + this.coefficients.get(i-1));
-                    System.out.println("F("+(size-i)+") = " + this.coefficients.get(size - i));
-                    System.out.println("************");
 
                     orderPositive = (order.subtract(coef)).compareTo(BigInteger.ZERO) >= 0;
                     if (orderPositive)  {
